@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"    tools:context="com.example.pedrolopes.internshapp.InternshipDescriptionActivity">
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Oferta Nº:"
+        android:id="@+id/textViewOffer"
+        android:layout_marginTop="28dp"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_alignParentStart="true"
+        android:paddingLeft="@dimen/activity_horizontal_margin"/>    <TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:text="0"
+    android:id="@+id/textViewOfferNum"
+    android:textStyle="bold"
+    android:layout_alignTop="@+id/textViewOffer"
+    android:layout_toEndOf="@+id/textViewOffer"
+    android:layout_marginStart="9dp" />
+
+    <ExpandableListView
+    android:id="@+id/lvExp"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_below="@+id/textViewOffer" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marcar"
+        android:id="@+id/checkBox"
+        android:checked="false"
+        android:layout_alignTop="@+id/textViewOfferNum"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="40dp" />
+
+</RelativeLayout>
